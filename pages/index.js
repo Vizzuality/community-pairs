@@ -4,7 +4,6 @@ import { pair, pairWithMatches } from '../components/pairs';
 
 const devs = [
   'María',
-  'Daniel Fernandez',
   'Pablo Pareja',
   'Andrés González',
   'Javi Abia',
@@ -47,12 +46,12 @@ export default function Home() {
 
         <p className={styles.description}>
           This week pairs
-          {pairs.map((dev) => (
+          {pairs && pairs[0] && pairs?.map((dev) => (
             <div>{dev.join(', ')}</div>
           ))}
         </p>
         <p className={styles.description}>
-          {pairsWithMatch.map((pair) => (
+          {pairsWithMatch?.map((pair) => (
             <>
               <>
                 <div className={styles.description}>
