@@ -1,4 +1,4 @@
-const findCommonInterests = require('./matches').findCommonInterests;
+import { findCommonInterests } from './matches';
 
 const createPairs = (devs, existingPairs, seed, hasTrio) => {
   const notAllowedPairs = existingPairs  || [];
@@ -66,11 +66,12 @@ export const pairWithMatches = (devs, existingPairs) => {
   const pairs = pair(devs, existingPairs)
   if(!pairs.length) return [];
   const texts = pairs?.map((pair) => {
-    const [dev1, dev2] = pair;
-    const commonInterests = findCommonInterests(dev1, dev2);
+    const [dev1, dev2, dev3] = pair;
+    const commonInterests = findCommonInterests(...pair);
     return {
       dev1,
       dev2,
+      dev3,
       commonInterests
     };
   });

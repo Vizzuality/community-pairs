@@ -1,6 +1,6 @@
-const skills = require('./skills').skills;
+import { skills } from './skills';
 
-const findCommonInterests = (name1, name2) => {
+export const findCommonInterests = (...devs) => {
   const filtered = skills
     .map((n) => {
       const un = {};
@@ -16,10 +16,13 @@ const findCommonInterests = (name1, name2) => {
       });
       return un;
     })
-    .filter((f) => [name1, name2].includes(f.name));
-  return Object.keys(filtered[0]).filter(
-    (k) => Object.keys(filtered[1]).includes(k) && k !== 'name' && k !== 'Timestamp'
-  );
+    .filter((f) => devs.includes(f.name));
+    const filteredKeys = filtered.map(k => Object.keys(k))
+  const result = filteredKeys
+    .reduce(
+      (a, b) =>
+        a.filter((k) => b.includes(k))
+    )
+    .filter((k) => k !== 'name');
+  return result;
 };
-
-exports.findCommonInterests = findCommonInterests;

@@ -57,7 +57,7 @@ export default function Home() {
                 <div className={styles.description}>
                   Hi <span className={styles.bold}>{pair.dev1}</span>,
                 </div>
-                <div>Your pair this week is: {pair.dev2},</div>
+                <div>Your pair this week is: {pair.dev2}, {pair.dev3}</div>
                 <div>Your common interests are:</div>
                 <div className={styles.code}>
                   {pair.commonInterests.map((i) => (
@@ -69,7 +69,7 @@ export default function Home() {
                 <div className={styles.description}>
                   Hi <span className={styles.bold}>{pair.dev2}</span>,
                 </div>
-                <div>Your pair this week is: {pair.dev1},</div>
+                <div>Your pair this week is: {pair.dev1}, {pair.dev3},</div>
                 <div>Your common interests are:</div>
                 <div className={styles.code}>
                   {pair.commonInterests.map((i) => (
@@ -77,6 +77,18 @@ export default function Home() {
                   ))}
                 </div>
               </>
+              {pair.dev3 && <>
+                <div className={styles.description}>
+                  Hi <span className={styles.bold}>{pair.dev3}</span>,
+                </div>
+                <div>Your pair this week is: {pair.dev1}, {pair.dev2},</div>
+                <div>Your common interests are:</div>
+                <div className={styles.code}>
+                  {pair.commonInterests.map((i) => (
+                    <div>{i}</div>
+                  ))}
+                </div>
+              </>}
             </>
           ))}
         </p>
