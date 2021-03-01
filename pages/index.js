@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { pair, pairWithMatches } from '../components/pairs';
 
-const devs = [
+const DEVS = [
   'María',
   'Pablo Pareja',
   'Andrés González',
@@ -14,7 +14,7 @@ const devs = [
   'Clément'
 ];
 
-const existingPairs = [
+const EXISTING_PAIRS = [
   ['María', 'Daniel Fernandez'],
   ['Pablo Pareja', 'Andrés González'],
   ['Javi Abia', 'David Inga'],
@@ -25,15 +25,15 @@ const existingPairs = [
   ['Pablo Pareja', 'Tomas Eriksson'],
   ['David Inga', 'Alvaro'],
   ['Miguel Barrenechea', 'Clément'],
-  ['María', 'Javi Abia']
-  ['Daniel Fernandez', 'Andrés González']
-  ['Pablo Pareja', 'Miguel Barrenechea']
-  ['David Inga', 'Clément']
+  ['María', 'Javi Abia'],
+  ['Daniel Fernandez', 'Andrés González'],
+  ['Pablo Pareja', 'Miguel Barrenechea'],
+  ['David Inga', 'Clément'],
   ['Tomas Eriksson', 'Alvaro']
 ];
 
-const pairs = pair(devs, existingPairs);
-const pairsWithMatch = pairWithMatches(devs, existingPairs);
+const pairs = pair(DEVS, EXISTING_PAIRS);
+const pairsWithMatch = pairWithMatches(DEVS, EXISTING_PAIRS);
 
 export default function Home() {
 
