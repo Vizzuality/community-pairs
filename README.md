@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is an app to inform the Vizzuality frontend team of the pair programming pairs for each week and also give them some hints on shared interests based on the [skills initiativeskills initiative](https://github.com/Vizzuality/vizzuality-skillshttps://github.com/Vizzuality/vizzuality-skills).
+
+Right now, until we create some cron job, the update each week is manual so we have to update the existingPairs variable on the pages/index.js f. Just add the ones correspoding to the week before so the calculation can be done correctly. The app accepts trios when the developer number is not even.
 
 ## Getting Started
 
