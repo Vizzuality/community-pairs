@@ -29,10 +29,10 @@ const EXISTING_PAIRS = [
   ['Daniel Fernandez', 'Andrés González'],
   ['Pablo Pareja', 'Miguel Barrenechea'],
   ['David Inga', 'Clément'],
-  ['Tomas Eriksson', 'Alvaro']
-  ['María', 'Pablo Pareja', 'David Inga']
-  ['Andrés González', 'Javi Abia']
-  ['Tomas Eriksson', 'Clément']
+  ['Tomas Eriksson', 'Alvaro'],
+  ['María', 'Pablo Pareja', 'David Inga'],
+  ['Andrés González', 'Javi Abia'],
+  ['Tomas Eriksson', 'Clément'],
   ['Miguel Barrenechea', 'Alvaro']
 ];
 
