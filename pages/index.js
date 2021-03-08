@@ -30,6 +30,10 @@ const EXISTING_PAIRS = [
   ['Pablo Pareja', 'Miguel Barrenechea'],
   ['David Inga', 'Clément'],
   ['Tomas Eriksson', 'Alvaro']
+  ['María', 'Pablo Pareja', 'David Inga']
+  ['Andrés González', 'Javi Abia']
+  ['Tomas Eriksson', 'Clément']
+  ['Miguel Barrenechea', 'Alvaro']
 ];
 
 const pairs = pair(DEVS, EXISTING_PAIRS);
