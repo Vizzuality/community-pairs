@@ -15,7 +15,7 @@ const DEVS = [
 ];
 
 const EXISTING_PAIRS = [
-  ['María', 'Daniel Fernandez'],
+ ['María', 'Daniel Fernandez'],
   ['Pablo Pareja', 'Andrés González'],
   ['Javi Abia', 'David Inga'],
   ['Tomas Eriksson', 'Miguel Barrenechea'],
@@ -41,8 +41,14 @@ const EXISTING_PAIRS = [
   ['María', 'Tomas Eriksson', 'Miguel Barrenechea'],
   ['Pablo Pareja', 'Alvaro'],
   ['Andrés González', 'David Inga']
-  ['Javi Abia', 'Clément']
-];
+  ['Javi Abia', 'Clément'],
+  ['Pablo Pareja', 'Clément', 'María'],
+  ['Javi Abia', 'Alvaro'],
+  ['David Inga', 'Miguel Barrenechea'],
+  ['Tomas Eriksson', 'Andrés González']
+]
+
+
 
 const pairs = pair(DEVS, EXISTING_PAIRS);
 const pairsWithMatch = pairWithMatches(DEVS, EXISTING_PAIRS);

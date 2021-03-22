@@ -63,8 +63,9 @@ export const pair = (devs, existingPairs) =>  {
 
 
 export const pairWithMatches = (devs, existingPairs) => {
-  const pairs = pair(devs, existingPairs)
-  if(!pairs.length) return [];
+  const pairs = pair(devs, existingPairs);
+  console.log('p', pairs)
+  if(!pairs || !pairs.length) return [];
   const texts = pairs?.map((pair) => {
     const [dev1, dev2, dev3] = pair;
     const commonInterests = findCommonInterests(...pair);
