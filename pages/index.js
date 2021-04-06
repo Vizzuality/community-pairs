@@ -14,41 +14,7 @@ const DEVS = [
   'Clément'
 ];
 
-const EXISTING_PAIRS = [
- ['María', 'Daniel Fernandez'],
-  ['Pablo Pareja', 'Andrés González'],
-  ['Javi Abia', 'David Inga'],
-  ['Tomas Eriksson', 'Miguel Barrenechea'],
-  ['Alvaro', 'Clément'],
-  ['María', 'Andrés González'],
-  ['Daniel Fernandez', 'Javi Abia'],
-  ['Pablo Pareja', 'Tomas Eriksson'],
-  ['David Inga', 'Alvaro'],
-  ['Miguel Barrenechea', 'Clément'],
-  ['María', 'Javi Abia'],
-  ['Daniel Fernandez', 'Andrés González'],
-  ['Pablo Pareja', 'Miguel Barrenechea'],
-  ['David Inga', 'Clément'],
-  ['Tomas Eriksson', 'Alvaro'],
-  ['María', 'Pablo Pareja', 'David Inga'],
-  ['Andrés González', 'Javi Abia'],
-  ['Tomas Eriksson', 'Clément'],
-  ['Miguel Barrenechea', 'Alvaro'],
-  ['María', 'Alvaro', 'Clément'],
-  ['Pablo Pareja', 'Javi Abia'],
-  ['Andrés González', 'Miguel Barrenechea'],
-  ['David Inga', 'Tomas Eriksson'],
-  ['María', 'Tomas Eriksson', 'Miguel Barrenechea'],
-  ['Pablo Pareja', 'Alvaro'],
-  ['Andrés González', 'David Inga']
-  ['Javi Abia', 'Clément'],
-  ['Pablo Pareja', 'Clément', 'María'],
-  ['Javi Abia', 'Alvaro'],
-  ['David Inga', 'Miguel Barrenechea'],
-  ['Tomas Eriksson', 'Andrés González']
-]
-
-
+const EXISTING_PAIRS = [];
 
 const pairs = pair(DEVS, EXISTING_PAIRS);
 const pairsWithMatch = pairWithMatches(DEVS, EXISTING_PAIRS);
