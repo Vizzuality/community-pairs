@@ -3,15 +3,15 @@ import styles from '../styles/Home.module.css'
 import { pair, pairWithMatches } from '../components/pairs';
 
 const DEVS = [
-  'María',
+  'David Inga',
   'Pablo Pareja',
+  'Alvaro',
   'Andrés González',
   'Javi Abia',
-  'David Inga',
   'Tomas Eriksson',
+  'Clément',
+  'María',
   'Miguel Barrenechea',
-  'Alvaro',
-  'Clément'
 ];
 
 const EXISTING_PAIRS = [];
