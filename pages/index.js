@@ -1,23 +1,35 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { pair, pairWithMatches } from '../components/pairs';
+import shuffleSeed from 'shuffle-seed';
 
+Date.prototype.getWeek = function() {
+    var onejan = new Date(this.getFullYear(),0,1);
+    return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7);
+}
+
+// If some developer is not available during the week, comment her/him
+
+// 'Tomas Eriksson',
 const DEVS = [
   'David Inga',
   'Pablo Pareja',
   'Alvaro',
   'Andrés González',
   'Javi Abia',
-  'Tomas Eriksson',
   'Clément',
   'María',
   'Miguel Barrenechea',
 ];
 
-const EXISTING_PAIRS = [];
-
-const pairs = pair(DEVS, EXISTING_PAIRS);
-const pairsWithMatch = pairWithMatches(DEVS, EXISTING_PAIRS);
+const EXISTING_PAIRS = [
+  ['David Inga', 'Andrés González', 'Alvaro'],
+  ['María', 'Miguel Barrenechea']
+];
+const weekNumber = new Date().getWeek();
+const shuffledDevs =  shuffleSeed.shuffle(DEVS, weekNumber);
+const pairs = pair(shuffledDevs, EXISTING_PAIRS);
+const pairsWithMatch = pairWithMatches(shuffledDevs, EXISTING_PAIRS);
 
 export default function Home() {
 

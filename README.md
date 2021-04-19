@@ -1,6 +1,10 @@
 This is an app to inform the Vizzuality frontend team of the pair programming pairs for each week and also give them some hints on shared interests based on the [skills initiative](https://github.com/Vizzuality/vizzuality-skills).
 
-Right now, until we create some cron job, the update each week is manual so we have to update the EXISTING_PAIRS constant on the pages/index.js. Just add the ones correspoding to the week before so the calculation can be done correctly. The app accepts trios when the developer number is not even.
+Right now, until we create some cron job, the update each week is manual so we have to update the EXISTING_PAIRS constant on the pages/index.js.
+
+Just add the ones correspoding to the week before so the calculation can be done correctly. Remember to remove of the array the developers that are not available that week.
+
+The app accepts trios when the developer number is not even.
 
 ## Getting Started
 
