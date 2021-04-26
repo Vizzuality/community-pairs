@@ -10,9 +10,9 @@ Date.prototype.getWeek = function() {
 
 // If some developer is not available during the week, comment her/him
 
-// 'Tomas Eriksson',
 const DEVS = [
   'David Inga',
+  'Tomas Eriksson',
   'Pablo Pareja',
   'Alvaro',
   'Andrés González',
@@ -24,8 +24,13 @@ const DEVS = [
 
 const EXISTING_PAIRS = [
   ['David Inga', 'Andrés González', 'Alvaro'],
-  ['María', 'Miguel Barrenechea']
+  ['María', 'Miguel Barrenechea'],
+  ['Alvaro', 'Javi Abia'],
+  ['David Inga', 'Miguel Barrenechea'],
+  ['Clément', 'Pablo Pareja'],
+  ['María', 'Andrés González']
 ];
+
 const weekNumber = new Date().getWeek();
 const shuffledDevs =  shuffleSeed.shuffle(DEVS, weekNumber);
 const pairs = pair(shuffledDevs, EXISTING_PAIRS);
